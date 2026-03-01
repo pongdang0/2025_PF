@@ -10,7 +10,7 @@ html{
 body {
   background: #000;
   color: #fff;
-  font-family: Arial, sans-serif;
+  font-family: 'pretendard_regular';
 }
 /*---font---*/
 @font-face{ 
@@ -32,33 +32,84 @@ body {
 
 /* ===== ABOUT ===== */
 .about {
-  padding: 100px 20px;
+  padding: 300px 20px;
   background: #000;
     font-family: 'pretendard_regular';
 }
 .about-container {
-  max-width: 1200px;
+  max-width: 2200px;
   margin: auto;
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
-.photo {
-  width: 220px;
-  height: auto;
-      max-width: 100%;
+.profile-box {
+    flex:1;
+    text-align: left;
+}
+.photo img{
+    width: 100%;
+    max-width: 300px;
     display: inline;
      text-align: center;
+     margin-bottom: 75px;
 }
-.about_me {
- font-family: 'futura_heavy';
- font-size: 80pt;
- margin:-90px 0 0 470px;
+.name-en { font-size: 0.9rem; letter-spacing: 2px; color: #888; }
+.profile-box h2 { font-size: 2.2rem; margin-top: 5px; }
+
+/* 아이콘 섹션 */
+.favorite_thing p {
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #aaa;
 }
-.info-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  margin: 30px 0;
+
+.thing_icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.thing_icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* WORKS 섹션 */
+.works-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* PC 3열 */
+    gap: 20px;
+}
+
+.work {
+    border: 1px solid #444;
+    border-radius: 15px;
+    padding: 20px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.work:hover {
+    transform: translateY(-5px);
+    border-color: #fff;
+}
+
+.work img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 이미지 비율 유지하며 꽉 차게 */
 }
 
