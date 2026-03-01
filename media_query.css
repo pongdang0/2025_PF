@@ -1,58 +1,23 @@
-/* 태블릿 (1024px 이하) */
-@media screen and (max-width: 1024px) {
-    .about-container {
-        gap: 30px;
-    }
-
-    .about_me { font-size: 2.5rem; }
-
-    .works-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2열로 변경 */
-    }
+/* 태블릿 (1200px 이하) */
+@media screen and (max-width: 1200px) {
+    .about-info { margin-left: 50px; } /* 간격 축소 */
+    .about_me { font-size: 60px; }
+    .profile-box h2 { font-size: 50px; }
+    
+    .works-grid { grid-template-columns: repeat(2, 1fr); } /* 2열 배열 */
 }
 
 /* 모바일 (768px 이하) */
 @media screen and (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* 세로 정렬 */
-        align-items: center;
-    }
-
-    .profile-box {
-        margin-bottom: 50px;
-    }
-
-    .about-info {
-        width: 100%;
-    }
-
-    .info-grid {
-        grid-template-columns: 1fr; /* 정보창 1열로 */
-    }
-
-    .about_me {
-        font-size: 2rem;
-        text-align: center;
-    }
+    .about-container { flex-direction: column; align-items: center; }
+    .about-info { margin-left: 0; margin-top: 50px; width: 100%; }
     
-    .works-grid {
-        grid-template-columns: 1fr; /* 작품 리스트 1열로 */
-    }
-
-    .work {
-        aspect-ratio: auto; /* 모바일에선 높이 자유롭게 */
-        height: 300px;
-    }
-    @media screen and (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* 모바일에서는 다시 세로로 */
-        align-items: center;
-    }
+    /* 모바일에서는 폰트 사이즈 대폭 축소 */
+    .about_me { font-size: 40px; }
+    .info-grid h3, .work_text h3 { font-size: 28px; }
+    .info-grid p, .work_text p { font-size: 18px; }
+    .profile-box h2 { font-size: 40px; }
     
-    .profile-box {
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 300px;
-    }
-}
+    .works-grid { grid-template-columns: 1fr; } /* 1열 배열 */
+    .work-text-container { grid-column: span 1; }
 }

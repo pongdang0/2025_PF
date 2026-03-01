@@ -30,88 +30,85 @@ body {
   display: block;
 }
 
-/* ===== ABOUT ===== */
-.about {
-  padding: 300px 20px;
-  background: #000;
-    font-family: 'pretendard_regular';
-}
+/* --- ABOUT 섹션 --- */
 .about-container {
     display: flex;
+    max-width: 1400px;
+    margin: 100px auto;
     align-items: flex-start;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
 }
-.profile-box {
-    flex:1;
-    text-align: left;
-}
-.photo img{
-    width: 100%;
-    height: auto;
-    max-width: 500px;
-    display: inline;
-    display:block;
-     margin-bottom: 75px;
-}
-.name-en { font-size: 0.9rem; letter-spacing: 2px; color:#fff;}
 
-/* 아이콘 섹션 */
-.favorite_thing {
+.profile-box {
+    flex: 0 0 450px; /* 프로필 이미지 기본 너비 */
     display: flex;
     flex-direction: column;
-}
-
-.favorite_thing .icons-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.thing_icon {
-    width: 50px;
+    align-items: center; /* 이미지와 이름 중앙 정렬 */
     text-align: center;
 }
 
-.thing_icon img {
+.photo img {
     width: 100%;
     height: auto;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
 }
 
-/* WORKS 섹션 */
-.works-section {
-    max-width: 1200px;
-    margin: 100px auto;
-    padding: 0 20px;
+.name-en { font-size: 30px; letter-spacing: 2px; }
+.profile-box h2 { font-size: 70px; font-weight: bold; line-height: 1.2; }
+
+/* 오른쪽 정보 문단 */
+.about-info {
+    flex: 1;
+    margin-left: 185px; /* 사진과 문단 사이 185px 이격 */
 }
 
+.about_me { 
+    font-size: 80px; 
+    font-weight: 900; 
+    margin-bottom: 50px; 
+}
+
+.info-grid h3 { 
+    font-size: 45px; 
+    border-bottom: 2px solid #fff; 
+    margin-bottom: 20px; 
+}
+
+.info-grid p { 
+    font-size: 35px; 
+    margin-bottom: 10px; 
+    color: #ccc; 
+}
+
+/* --- WORKS 섹션 (4x2 배열) --- */
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 가로 4칸 */
     gap: 20px;
+    max-width: 1400px;
+    margin: 100px auto;
 }
 
 .work {
-    border: 1px solid #fff;
-    border-radius: 30px;
     aspect-ratio: 1 / 1;
+    border: 1px solid #444;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s;
+    overflow: hidden;
 }
 
-.work:hover {
-    transform: translateY(-5px);
-    border-color: #fff;
+.work img { width: 90%; height: 90%; object-fit: contain; }
+
+/* 워크 텍스트 (남은 2칸 차지) */
+.work-text-container {
+    grid-column: span 2; /* 2칸 너비 차지 */
+    display: flex;
+    align-items: center; /* 상하 중앙 정렬 */
+    justify-content: center; /* 좌우 중앙 정렬 */
+    padding: 20px;
 }
 
-.work img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* 이미지 비율 유지하며 꽉 차게 */
-}
+.work_text h3 { font-size: 45px; margin-bottom: 20px; }
+.work_text p { font-size: 35px; line-height: 1.6; }
 
