@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== COVER IMAGE ===== */
+.cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== ABOUT ===== */
+.about {
+  padding: 100px 20px;
+  background: #000;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.photo {
+  width: 220px;
+  height: 280px;
+  background: #2e44ff;
+}
+
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 30px 0;
+}
+
+/* ===== WORKS ===== */
+.works-section {
+  padding: 100px 20px;
+  background: #000;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.work {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 60px;
+  text-align: center;
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 768px) {
+
+  .about-container {
+    flex-direction: row;
+  }
+
+  .info-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .works-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 1200px) {
+
+  .works-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
