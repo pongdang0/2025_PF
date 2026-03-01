@@ -35,10 +35,6 @@
         padding-left: 0;
         margin-top: 20px;
     }
-    .info-grid p { 
-        line-height: 1.6;
-        word-break: keep-all;
-    }
 }
 
 /* ===== 2. Mobile (768px 이하) ===== */
