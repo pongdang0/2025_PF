@@ -39,10 +39,10 @@ body {
 }
 
 .profile-box {
-    flex: 0 0 450px; /* 프로필 이미지 기본 너비 */
+    flex: 0 0 450px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* 이미지와 이름 중앙 정렬 */
+    align-items: center;
     text-align: center;
 }
 
@@ -59,7 +59,7 @@ body {
 /* 오른쪽 정보 문단 */
 .about-info {
     flex: 1;
-    margin-left: 185px; /* 사진과 문단 사이 185px 이격 */
+    margin-left: 185px;
 }
 
 .about_me { 
@@ -67,23 +67,50 @@ body {
     font-weight: 900; 
     margin-bottom: 50px; 
 }
-
-.info-grid h3 { 
-    font-size: 45px; 
-    border-bottom: 2px solid #fff; 
-    margin-bottom: 20px; 
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 40px;
+}
+.info-item h3 {
+    font-size: 45px;
+    margin-bottom: 25px;
+    border-bottom: none;
+    text-transform: uppercase;
 }
 
-.info-grid p { 
-    font-size: 35px; 
-    margin-bottom: 10px; 
-    color: #ccc; 
+.info-item p {
+    font-size: 35px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    color: #fff;
+}
+/* --- SKILLS 아이콘 --- */
+.thing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);  
+    gap: 15px;
+    margin-top: 10px;
 }
 
-/* --- WORKS 섹션 (4x2 배열) --- */
+.thing_icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thing_icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* --- WORKS 섹션 --- */
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 가로 4칸 */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     max-width: 1400px;
     margin: 100px auto;
@@ -100,12 +127,12 @@ body {
 
 .work img { width: 90%; height: 90%; object-fit: contain; }
 
-/* 워크 텍스트 (남은 2칸 차지) */
+/* 워크 텍스트 */
 .work-text-container {
-    grid-column: span 2; /* 2칸 너비 차지 */
+    grid-column: span 2;
     display: flex;
-    align-items: center; /* 상하 중앙 정렬 */
-    justify-content: center; /* 좌우 중앙 정렬 */
+    align-items: center;
+    justify-content: center;
     padding: 20px;
 }
 
