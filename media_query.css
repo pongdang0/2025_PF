@@ -1,23 +1,90 @@
-/* 태블릿 (1200px 이하) */
-@media screen and (max-width: 1200px) {
-    .about-info { margin-left: 50px; } /* 간격 축소 */
-    .about_me { font-size: 60px; }
-    .profile-box h2 { font-size: 50px; }
-    
-    .works-grid { grid-template-columns: repeat(2, 1fr); } /* 2열 배열 */
+/* ===== 1. Tablet (1024px 이하) ===== */
+@media screen and (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+
+    .profile-box {
+        flex: 0 0 auto;
+        margin: 20px 0 50px 0;
+    }
+    .about-info {
+        margin: 20px 0 0 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: fit-content;
+        gap: 40px;
+        text-align: left;
+        
+    }
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+    .work_text {
+        grid-column: span 2;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
 }
 
-/* 모바일 (768px 이하) */
+/* ===== 2. Mobile (768px 이하) ===== */
 @media screen and (max-width: 768px) {
-    .about-container { flex-direction: column; align-items: center; }
-    .about-info { margin-left: 0; margin-top: 50px; width: 100%; }
-    
-    /* 모바일에서는 폰트 사이즈 대폭 축소 */
-    .about_me { font-size: 40px; }
-    .info-grid h3, .work_text h3 { font-size: 28px; }
-    .info-grid p, .work_text p { font-size: 18px; }
-    .profile-box h2 { font-size: 40px; }
-    
-    .works-grid { grid-template-columns: 1fr; } /* 1열 배열 */
-    .work-text-container { grid-column: span 1; }
+
+    .about_me { font-size: 30px; text-align: center; }
+    .profile-box h2 { font-size: 32px; }
+    p, .info-grid p { font-size: 16px; }
+    .photo{
+        width:  70%;
+        height: auto;
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .info-grid h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+    .works-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .work {
+        width: 60%;
+        max-width: 400px;
+        margin: 0 0 20px 0;
+    }
+    .work_text {
+        grid-column: span 1;
+        align-items: center;
+        text-align: left;
+        margin: 0 auto;
+        padding-left: 0;
+        align-items: flex-start;
+    }
+    .icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin: 20px 0 40px 0;
+    }
+    .thing_icon {
+        width: 120px;
+        height: auto;
+        margin: 0;
+    }
 }
