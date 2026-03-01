@@ -1,0 +1,24 @@
+/* ===== TABLET ===== */
+@media (min-width: 768px) {
+
+  .about-container {
+    flex-direction: row;
+  }
+
+  .info-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .works-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 1200px) {
+
+  .works-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
