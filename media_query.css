@@ -43,4 +43,16 @@
         aspect-ratio: auto; /* 모바일에선 높이 자유롭게 */
         height: 300px;
     }
+    @media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* 모바일에서는 다시 세로로 */
+        align-items: center;
+    }
+    
+    .profile-box {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 300px;
+    }
+}
 }
