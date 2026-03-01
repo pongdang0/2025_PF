@@ -34,8 +34,8 @@ body {
 .about {
   padding: 100px 20px;
   background: #000;
+    font-family: 'pretendard_regular';
 }
-
 .about-container {
   max-width: 1200px;
   margin: auto;
@@ -43,13 +43,18 @@ body {
   flex-direction: column;
   gap: 60px;
 }
-
 .photo {
   width: 220px;
-  height: 280px;
-  background: #2e44ff;
+  height: auto;
+      max-width: 100%;
+    display: inline;
+     text-align: center;
 }
-
+.about_me {
+ font-family: 'futura_heavy';
+ font-size: 80pt;
+ margin:-90px 0 0 470px;
+}
 .info-grid {
   display: flex;
   flex-direction: column;
