@@ -96,10 +96,8 @@
         height: auto;
         margin: 0;
     }
-
-    @media screen and (max-width: 768px) {
     .history-item {
-        flex-direction: column; /* 모바일에선 날짜 아래로 내용이 오게 */
+        flex-direction: column;
         gap: 5px;
     }
     
@@ -108,14 +106,14 @@
     }
 
     .info-grid {
-        width: 100%; /* fit-content는 가끔 화면을 뚫고 나갑니다 */
-        display: block; /* 모바일은 세로로 쭉 나열 */
+        width: 100%; /* 모바일은 세로로 쭉 나열 */
     }
-
-    /* 아이콘 크기 조정 */
     .thing_icon {
-        width: 25%; /* 고정 px 대신 % 사용 권장 */
+        width: 25%;
         max-width: 80px;
     }
-}
+    .contents_t {
+        line-height: 2.0;
+        font-size: 16px;
+    }
 }
