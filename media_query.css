@@ -33,12 +33,18 @@
         text-align: left;
         
     }
+    .work {
+        width: 100%;
+        height: auto;
+    }
     .works-grid {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
         padding: 0 20px;
     }
     .work_text {
-        grid-column: span 2;
+        grid-column: span 3;
         padding-left: 0;
         margin: 20px 0 0 50px;
     }
