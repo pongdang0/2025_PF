@@ -32,6 +32,10 @@ body {
     font-family: 'pretendard_light';
     src: url('./font/Pretendard/Pretendar_light.otf') format('opentype'); /* 오타 수정: fomat -> format */
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 /* ===== COVER IMAGE ===== */
 .cover img {
   width: 100%;
@@ -81,7 +85,7 @@ body {
 .about_me { 
     font-size: 40px; 
     font-weight: 900; 
-    margin-bottom: 20px; 
+    margin-bottom: 40px; 
 }
 .info-grid {
     display: grid;
@@ -93,6 +97,7 @@ body {
     font-family: 'pretendard_light';
     font-size: 25px;
     margin: 0 0 20px 0;
+    display: inline-block;
 }
 .info-grid p{
     font-weight: 300;
@@ -107,8 +112,53 @@ p {
     font-size: 20px;
     color: #fff;
 }
+.bold {
+    font-family: 'pretendard_bold';
+    text-align: left;
+}
+.light {
+    font-family: 'pretendard_light';
+    font-size: 20px;
+    color: #fff;
+}
+.profile-item, .license-item, .history-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+    align-items: baseline;
+}
+.history-item .light {
+    flex: 0 0 180px;
+    white-space: nowrap;
+}
+.history-item .bold {
+    flex: 0 0 180px;
+    white-space: nowrap;
+    margin: 0 0 0 80px;
+}
+.light {
+    font-family: 'pretendard_light';
+    font-size: 16px;
+}
+.bold {
+    font-family: 'pretendard_bold';
+    font-size: 16px;
+}
+
 /* --- SKILLS 아이콘 --- */
 
+.favorite_thing {
+    grid-column: span 1;
+}
+.skill_group, .fav_group {
+    margin-bottom: 30px;
+}
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 .thing_icon {
     width: 85px;
     height: auto;

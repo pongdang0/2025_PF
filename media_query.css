@@ -40,9 +40,15 @@
 /* ===== 2. Mobile (768px 이하) ===== */
 @media screen and (max-width: 768px) {
 
-    .about_me { font-size: 30px; text-align: center; }
-    .profile-box h2 { font-size: 32px; }
-    p, .info-grid p { font-size: 16px; }
+    .about_me {
+        font-size: 30px; text-align: center;
+    }
+    .profile-box h2 {
+        font-size: 32px;
+    }
+    p, .info-grid p {
+        font-size: 16px;
+    }
     .photo{
         width:  70%;
         height: auto;
@@ -86,8 +92,30 @@
         margin: 20px 0 40px 0;
     }
     .thing_icon {
-        width: 120px;
+        width: 100px;
         height: auto;
         margin: 0;
     }
+
+    @media screen and (max-width: 768px) {
+    .history-item {
+        flex-direction: column; /* 모바일에선 날짜 아래로 내용이 오게 */
+        gap: 5px;
+    }
+    
+    .history-item .date {
+        flex: 0 0 auto;
+    }
+
+    .info-grid {
+        width: 100%; /* fit-content는 가끔 화면을 뚫고 나갑니다 */
+        display: block; /* 모바일은 세로로 쭉 나열 */
+    }
+
+    /* 아이콘 크기 조정 */
+    .thing_icon {
+        width: 25%; /* 고정 px 대신 % 사용 권장 */
+        max-width: 80px;
+    }
+}
 }
