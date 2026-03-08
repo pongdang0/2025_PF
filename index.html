@@ -81,23 +81,23 @@
   <!-- WORKS -->
   <section class="works-section">
     <div class="works-grid">
-      <div class="work" onclick="openModal('./sause/1.the_cat.jpg')">
-        <img src="./sause/cover/cover_content_01.png" alt="Portfolio_work_01"></div>
+      <a href="detail.html?img=./sause/1.the_cat.jpg" target="_blank" class="work">
+        <img src="./sause/cover/cover_content_01.png" alt="Portfolio_work_01"></a>
 
-      <div class="work" onclick="openModal('./sause/2.labo_package.jpg')">
-        <img src="./sause/cover/cover_content_02.png" alt="Portfolio_work_02"></div>
+      <a href="detail.html?img=./sause/2.labo_package.jpg" target="_blank" class="work">
+        <img src="./sause/cover/cover_content_02.png" alt="Portfolio_work_02"></a>
 
-      <div class="work" onclick="openModal(['./sause/3-1.2024mafraday.gif','./sause/3-2.2024mafraday.jpg'])">
-        <img src="./sause/cover/cover_content_03.png" alt="Portfolio_work_03"></div>
+      <a href="detail.html?img=./sause/3-1.2024mafraday.gif,./sause/3-2.2024mafraday.jpg" target="_blank" class="work">
+        <img src="./sause/cover/cover_content_03.png" alt="Portfolio_work_03"></a>
 
-      <div class="work" onclick="openModal('./sause/4.graffiti_hoodie.jpg')">
-        <img src="./sause/cover/cover_content_04.png" alt="Portfolio_work_04"></div>
+      <a href="detail.html?img=./sause/4.graffiti_hoodie.jpg" target="_blank" class="work">
+        <img src="./sause/cover/cover_content_04.png" alt="Portfolio_work_04"></a>
 
-      <div class="work" onclick="openModal(['./sause/5-1.mafra_calender.jpg','./sause/5-2.mafra_calender.gif','./sause/5-3.mafra_calender.jpg'])">
-        <img src="./sause/cover/cover_content_05.png" alt="Portfolio_work_05"></div>
+      <a href="detail.html?img=./sause/5-1.mafra_calender.jpg,./sause/5-2.mafra_calender.gif,./sause/5-3.mafra_calender.jpg" target="_blank" class="work">
+        <img src="./sause/cover/cover_content_05.png" alt="Portfolio_work_05"></a>
 
-      <div class="work" onclick="openModal('./sause/6.movie_posters.jpg')">
-        <img src="./sause/cover/cover_content_06.png" alt="Portfolio_work_06"></div>
+      <a href="detail.html?img=./sause/6.movie_posters.jpg" target="_blank" class="work">
+        <img src="./sause/cover/cover_content_06.png" alt="Portfolio_work_06"></a>
     <div class="work_text">
         <h2>CONTENTS</h2>
         <div class="contents_t">
@@ -116,40 +116,5 @@
   <img src="./sause/cover/cover_end.jpg" alt="Portfolio Cover end">
   </section>
 
-<div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <div class="modal-content-wrapper" onclick="event.stopPropagation()">
-        <div id="fullImageContainer"></div>
-    </div>
-</div>
-
-<script>
-function openModal(imgList) {
-    const modal = document.getElementById("imageModal");
-    const container = document.getElementById("fullImageContainer");
-
-    modal.scrollTop = 0;
-    
-    container.innerHTML = "";
-
-    const images = Array.isArray(imgList) ? imgList : [imgList];
-    
-    images.forEach(src => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.style.width = "100%";
-        img.style.display = "block"; 
-        container.appendChild(img);
-    });
-
-    modal.style.display = "block";
-    document.body.style.overflow = "hidden";
-}
-
-function closeModal() {
-    document.getElementById("imageModal").style.display = "none";
-    document.body.style.overflow = "auto";
-}
-</script>
 </body>
 </html>

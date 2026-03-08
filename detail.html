@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Work Detail</title>
+    <style>
+        body { 
+            margin: 0;
+            padding: 0;
+            background: #000; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img {
+            width: 100%;
+            display: block;
+            height: auto;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+   <div id="image-container" style="width: 100%;"></div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const imgData = params.get('img');
+
+        if (imgData) {
+            const container = document.getElementById('image-container');
+            const imgList = imgData.split(',');
+
+            imgList.forEach(src => {
+                const imgTag = document.createElement('img');
+                imgTag.src = src.trim();
+                container.appendChild(imgTag);
+            });
+        }
+    </script>
+</body>
+</html>
