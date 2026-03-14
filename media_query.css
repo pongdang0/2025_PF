@@ -87,6 +87,13 @@
         margin-bottom: 10px;
         padding-bottom: 5px;
     }
+    .profile-item, .license-item, .history-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 8px;
+    margin: 0 0 12px 0;
+    align-items: baseline;
+    }
     .works-grid {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -134,7 +141,7 @@
     }
 
     .info-grid {
-        width: 100%; /* 모바일은 세로로 쭉 나열 */
+        width: 100%;
     }
     .contents_t {
         line-height: 2.0;
