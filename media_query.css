@@ -41,7 +41,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
-        padding: 0 30px;
+        padding: 0 70px;
         justify-items: center;
     }
     .work_text {
@@ -92,7 +92,7 @@
         justify-items: center;
     }
     .work {
-        width: 70%;
+        width: 85%;
         max-width: 400px;
         margin: 0 0 20px 0;
     }
